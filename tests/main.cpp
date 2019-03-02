@@ -2,8 +2,7 @@
 #include <uWS/uWS.h>
 #include <iostream>
 #include "json.hpp"
-#include "FusionEKF.h"
-#include "tools.h"
+#include "fusion_ekf/FusionEKF.h"
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
@@ -111,14 +110,14 @@ int main() {
           fusionEKF.ProcessMeasurement(meas_package);       
 
           // Push the current estimated x,y positon from the Kalman filter's 
-          //   state vector
+          // state vector
 
           VectorXd estimate(4);
 
           double p_x = fusionEKF.ekf_.x_(0);
           double p_y = fusionEKF.ekf_.x_(1);
           double v1  = fusionEKF.ekf_.x_(2);
-          double v2 = fusionEKF.ekf_.x_(3);
+          double v2  = fusionEKF.ekf_.x_(3);
 
           estimate(0) = p_x;
           estimate(1) = p_y;
