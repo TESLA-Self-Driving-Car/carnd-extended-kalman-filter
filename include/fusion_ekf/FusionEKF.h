@@ -7,7 +7,6 @@
 #include <fstream>
 #include "fusion_ekf/kalman_filter.h"
 #include "fusion_ekf/measurement_package.h"
-#include "fusion_ekf/tools.h"
 
 class FusionEKF {
 public:
