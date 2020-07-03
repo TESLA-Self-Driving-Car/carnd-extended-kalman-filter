@@ -1,6 +1,6 @@
 #include <iostream>
-#include "fusion_ekf/kalman_filter.h"
-#include "fusion_ekf/tools.h"
+#include "kalman_filter.h"
+#include "tools.h"
 
 using namespace std;
 using Eigen::MatrixXd;
@@ -8,7 +8,7 @@ using Eigen::VectorXd;
 
 const float PI = 3.14;
 
-// Please note that the Eigen library does not initialize 
+// Please note that the Eigen library does not initialize
 // VectorXd or MatrixXd objects with zeros upon creation.
 
 KalmanFilter::KalmanFilter() {}
